@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/suraNumber"
+        style="@style/bodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sura_number_frame"
+        android:gravity="center"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/suraNameEn"
+        style="@style/bodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/suraNumber"
+        tools:text="Al-Fatiha" />
+
+    <TextView
+        android:id="@+id/suraVerses"
+        style="@style/bodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/suraNameEn"
+        app:layout_constraintTop_toBottomOf="@id/suraNameEn"
+        tools:text="7 Verses  " />
+
+    <TextView
+        android:id="@+id/suraNameAr"
+        style="@style/bodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/suraVerses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="الفاتحه" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintWidth_percent=".7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/suraVerses" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
