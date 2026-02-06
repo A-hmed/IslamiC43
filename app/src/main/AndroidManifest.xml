@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IslamiC43">
         <activity
+            android:name=".ui.screens.hadeth_details.HadethDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.screens.sura_details.SuraDetailsActivity"
             android:exported="false" />
         <activity

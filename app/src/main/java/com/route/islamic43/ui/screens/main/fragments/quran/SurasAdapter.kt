@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.route.islamic43.R
 import com.route.islamic43.ui.model.SuraDM
 
-class SurasAdapter(val suras: List<SuraDM>) : RecyclerView.Adapter<SurasAdapter.SuraViewHolder>() {
+class SurasAdapter(val suras: List<SuraDM>, val onClick: (SuraDM) -> Unit) :
+    RecyclerView.Adapter<SurasAdapter.SuraViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
@@ -25,6 +26,9 @@ class SurasAdapter(val suras: List<SuraDM>) : RecyclerView.Adapter<SurasAdapter.
         holder.suraNameEn.text = sura.nameEn
         holder.suraNameAr.text = sura.nameAr
         holder.suraVerses.text = "${sura.versesCount} Verses"
+        holder.itemView.setOnClickListener {
+            onClick(sura)
+        }
     }
 
     override fun getItemCount(): Int = suras.size
